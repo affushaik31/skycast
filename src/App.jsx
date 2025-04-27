@@ -56,7 +56,6 @@ function App() {
           <h1 id="tempc">{weather.current.temp_c}°C</h1>
           
           <div>
-          <h1 id="date">{weather.forecast.forecastday[0].date}</h1>
           <h1 id="place">{weather.location.name}</h1>
           </div>
           <h1 id='region'>{weather.location.region}</h1>
@@ -64,31 +63,31 @@ function App() {
 
         </div>
         
-        
         <div className='child3'>
           
-            <img src="/sunrise.png" width='50px'/>
-            <h1>Sunrise: {weather.forecast.forecastday[0].astro.sunrise}</h1>
-            <img src="/sunset.png" width='50px'/>
-            <h1>Sunset: {weather.forecast.forecastday[0].astro.sunset}</h1>  
-                  
-            
-            <h1>max: {weather.forecast.forecastday[0].day.maxtemp_c}°C</h1>
-            <h1>min: {weather.forecast.forecastday[0].day.mintemp_c}°C</h1>
-            
+          <img src="/sunrise.png" width='50px'/>
+          <h1>Sunrise: {weather.forecast.forecastday[0].astro.sunrise}</h1>
+          <img src="/sunset.png" width='50px'/>
+          <h1>Sunset: {weather.forecast.forecastday[0].astro.sunset}</h1>  
+                
+          
+          <h1>max: {weather.forecast.forecastday[0].day.maxtemp_c}°C</h1>
+          <h1>min: {weather.forecast.forecastday[0].day.mintemp_c}°C</h1>
+          
+      </div>
+      <div className='child4'>  
+
+        <div id='flex'>
+        <img src="/wind.png" width='50px'/>
+        <h3>Wind: {weather.current.wind_kph} km/h</h3>
         </div>
-        <div className='child4'>  
 
-          <div id='flex'>
-          <img src="/wind.png" width='50px'/>
-          <h3>Wind: {weather.current.wind_kph} km/h</h3>
-          </div>
+        <div id='flex1'>
+        <img src="/humidity.png" width='50px'/>
+        <h3>Humidity: {weather.current.humidity}%</h3>
+        </div>
+     </div>
 
-          <div id='flex1'>
-          <img src="/humidity.png" width='50px'/>
-          <h3>Humidity: {weather.current.humidity}%</h3>
-          </div>
-       </div>
         
         </>}
       </div>
